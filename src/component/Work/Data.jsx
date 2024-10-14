@@ -28,7 +28,7 @@ export const projectData = [
         image: img3,
         title: "Crypto Watch",
         category: "Frontend",
-        url: "https://crypto-watch.onrender.com/",
+        url: "https://crypto-watch-vishal.netlify.app/",
         github: "https://github.com/vishwakarma-vishal/crypto-watch"
     },
     {
