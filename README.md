@@ -1,5 +1,3 @@
----
-
 # Portfolio Project
 
 ## Overview
@@ -64,5 +62,3 @@ This project is a personal portfolio website that showcases my skills, services,
 
 ## Additional Information
 This README provides a step-by-step overview of how the portfolio was built. The project leverages modern front-end practices, including React hooks and component-based architecture. For more details, please refer to the project’s source code.
-
----
