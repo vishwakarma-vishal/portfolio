@@ -11,6 +11,7 @@ import 'swiper/css/pagination';
 
 // import required modules
 import { Pagination } from 'swiper/modules';
+import Linkedin from "../../assets/icons/Linkedin";
 
 export default function () {
 
@@ -38,13 +39,12 @@ export default function () {
                 }}
                 modules={[Pagination]}
             >
-                {Data.map(({ id, image, title,relation, description }) => {
+                {Data.map(({ id, image, title, description, linkedin }) => {
                     return (
                         <SwiperSlide key={id} className="testimonial__card" >
                             <img src={image} alt="" className='testimonial__img' />
-
                             <h3 className="testimonial__name">{title}</h3>
-                            <span className="testimonial__category">({relation})</span>
+                            <a className="testimonial__category" href={linkedin} target="_blank"><Linkedin/></a>
                             <p className="testimonial__description">{description}</p>
                         </SwiperSlide>
                     )

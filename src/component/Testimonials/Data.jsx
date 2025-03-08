@@ -7,20 +7,23 @@ export const Data = [
         image: img1,
         title: "Nayan Kumawat",
         description: "Vishal always comes up with innovative solutions. They are a great team player and ready to help with any challenges the team faces.",
-        relation: "Friend"
-    },
-    {
-        id: 1,
-        image: img2,
-        title: "Pushkar Vyas",
-        description: "Vishal is knowledgeable and a great communicator. Their dedication to refining their skills sets them apart and ensures they deliver quality work.",
-        relation: "Friend"
+        relation: "Friend",
+        linkedin: "https://www.linkedin.com/in/nayan-kumawat-77a67a298/"
     },
     {
         id: 3,
         image: img2,
         title: "Piyush Carpenter",
         description: "Watching Vishal evolve into a skilled developer has been amazing. Their passion for coding truly shines through in every project they undertake.",
-        relation: "Friend"
+        relation: "Friend",
+        linkedin: "https://www.linkedin.com/in/piyush-carpenter-1b4b70258/"
     },
+    {
+        id: 1,
+        image: img2,
+        title: "Pushkar Vyas",
+        description: "Vishal is knowledgeable and a great communicator. Their dedication to refining their skills sets them apart and ensures they deliver quality work.",
+        relation: "Friend",
+        linkedin: "https://www.linkedin.com/in/pushkar-vyas/"
+    }
 ];
