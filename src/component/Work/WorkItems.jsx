@@ -15,7 +15,7 @@ export default function WorkItems({ item }) {
                         Demo<i className="bx bx-right-arrow-alt work__button-icon"></i>
                     </a>
                     <a target="_blank" href={item.github} className="work__button">
-                        <i class='bx bxl-github'></i>
+                        <i className='bx bxl-github'></i>
                     </a>
                 </div>
             </div>

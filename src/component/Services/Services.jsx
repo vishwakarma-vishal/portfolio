@@ -118,7 +118,7 @@ export default function Services() {
 
                 <div className="services__content">
                     <div>
-                    <i class="uil uil-database services__icon"></i>
+                    <i className="uil uil-database services__icon"></i>
                         <h3 className="services__title">Backend Development</h3>
                     </div>
 

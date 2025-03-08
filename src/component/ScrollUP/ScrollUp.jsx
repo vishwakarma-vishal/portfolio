@@ -35,7 +35,7 @@ export default function ScrollUp() {
 
     return (
         <a href="#" className="scrollup">
-            <i class="uil uil-arrow-up scrollup-icon"></i>
+            <i className="uil uil-arrow-up scrollup-icon"></i>
         </a>
     )
 }
