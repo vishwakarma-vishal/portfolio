@@ -1,15 +1,14 @@
 
-
 export default function Experience() {
 
     return (
         <div className="qualification__content">
             <div className="qualification__data">
                 <div>
-                    <h3 className="qualification__title">DSA with C++</h3>
-                    <span className="qualification__subtitle">Online</span>
+                    <h3 className="qualification__title">Tecell</h3>
+                    <span className="qualification__subtitle">SDE Intern at Tecell</span>
                     <div className="qualification__calendar">
-                        <i className="uil uil-calendar-alt"></i>Jun - Present
+                        <i className="uil uil-calendar-alt"></i>Jan 2025 - Present
                     </div>
                 </div>
 
@@ -29,10 +28,10 @@ export default function Experience() {
                 </div>
 
                 <div>
-                    <h3 className="qualification__title">React JS</h3>
+                    <h3 className="qualification__title">Rreelancing</h3>
                     <span className="qualification__subtitle">Project-Based</span>
                     <div className="qualification__calendar">
-                        <i className="uil uil-calendar-alt"></i>Apr - present
+                        <i className="uil uil-calendar-alt"></i>Jun 2024 - Jan 2025
                     </div>
                 </div>
 
@@ -41,10 +40,10 @@ export default function Experience() {
 
             <div className="qualification__data">
                 <div>
-                    <h3 className="qualification__title">Tailwind</h3>
+                    <h3 className="qualification__title">C++</h3>
                     <span className="qualification__subtitle">Independent</span>
                     <div className="qualification__calendar">
-                        <i className="uil uil-calendar-alt"></i>Feb - Mar 2024
+                        <i className="uil uil-calendar-alt"></i>Sep 2024 - Current
                     </div>
                 </div>
 

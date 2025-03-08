@@ -8,7 +8,7 @@ export default function Education() {
                     <h3 className="qualification__title">MCA</h3>
                     <span className="qualification__subtitle">RGPV - University</span>
                     <div className="qualification__calendar">
-                        <i className="uil uil-calendar-alt"></i>2022 - present
+                        <i className="uil uil-calendar-alt"></i>2022 - 2024
                     </div>
                 </div>
 

@@ -1,5 +1,13 @@
 
 export default function Backend() {
+    const skills = [
+        { name: "C++", level: "Intermediate" },
+        { name: "Mongo DB", level: "Intermediate" },
+        { name: "Express JS", level: "Intermediate" },
+        { name: "SQL", level: "Intermediate" },
+        { name: "Next JS", level: "Basic" },
+        { name: "Node JS", level: "Intermediate" }
+    ];
 
     return (
         <div className="skills__content">
@@ -7,63 +15,27 @@ export default function Backend() {
 
             <div className="skills__box">
                 <div className="skills__group">
-
-                    <div className="skills__data">
-                        <i class='bx bx-badge-check'></i>
-
-                        <div>
-                            <h3 className="skills__name">C++</h3>
-                            <span className="skills__level">Intermediate</span>
+                    {skills.slice(0, 3).map(skill => (
+                        <div className="skills__data" key={skill.name}>
+                            <i className='bx bx-badge-check'></i>
+                            <div>
+                                <h3 className="skills__name">{skill.name}</h3>
+                                <span className="skills__level">{skill.level}</span>
+                            </div>
                         </div>
-                    </div>
-
-                    <div className="skills__data">
-                        <i class='bx bx-badge-check'></i>
-
-                        <div>
-                            <h3 className="skills__name">Mongo DB</h3>
-                            <span className="skills__level">Intermediate</span>
-                        </div>
-                    </div>
-
-                    <div className="skills__data">
-                        <i class='bx bx-badge-check'></i>
-
-                        <div>
-                            <h3 className="skills__name">Firebase</h3>
-                            <span className="skills__level">Intermediate</span>
-                        </div>
-                    </div>
+                    ))}
                 </div>
 
                 <div className="skills__group">
-                    <div className="skills__data">
-                        <i class='bx bx-badge-check'></i>
-
-                        <div>
-                            <h3 className="skills__name">SQL</h3>
-                            <span className="skills__level">Intermediate</span>
+                    {skills.slice(3).map(skill => (
+                        <div className="skills__data" key={skill.name}>
+                            <i className='bx bx-badge-check'></i>
+                            <div>
+                                <h3 className="skills__name">{skill.name}</h3>
+                                <span className="skills__level">{skill.level}</span>
+                            </div>
                         </div>
-                    </div>
-
-                    <div className="skills__data">
-                        <i class='bx bx-badge-check'></i>
-
-                        <div>
-                            <h3 className="skills__name">Express JS</h3>
-                            <span className="skills__level">Basic</span>
-                        </div>
-                    </div>
-
-                    <div className="skills__data">
-                        <i class='bx bx-badge-check'></i>
-
-                        <div>
-                            <h3 className="skills__name">Node JS</h3>
-                            <span className="skills__level">Basic</span>
-                        </div>
-                    </div>
-                    {/* Can add more skills */}
+                    ))}
                 </div>
             </div>
         </div>
