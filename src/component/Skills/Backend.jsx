@@ -1,12 +1,12 @@
 
 export default function Backend() {
     const skills = [
-        { name: "C++", level: "Intermediate" },
-        { name: "Mongo DB", level: "Intermediate" },
-        { name: "Express JS", level: "Intermediate" },
-        { name: "SQL", level: "Intermediate" },
-        { name: "Next JS", level: "Basic" },
-        { name: "Node JS", level: "Intermediate" }
+        { name: "MongoDB", level: "Intermediate" },
+        { name: "Express.js", level: "Intermediate" },
+        { name: "Next.js", level: "Intermediate" },
+        { name: "PostgreSQL", level: "Intermediate" },
+        { name: "Node.js", level: "Intermediate" },
+        { name: "C++", level: "Intermediate" }
     ];
 
     return (

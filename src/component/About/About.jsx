@@ -1,6 +1,6 @@
 import './About.css';
 import Info from './Info';
-import AboutImg from '../../assets/profile.jpg';
+import AboutImg from '../../assets/profile.png';
 import CV from '../../assets/Vishal-CV.pdf';
 import Save from '../../assets/icons/Save';
 
@@ -17,8 +17,7 @@ export default function About() {
                     <Info />
 
                     <p className='about__description'>
-                        I’m a Full-Stack Developer specializing in the MERN stack, building scalable and high-performance web applications. I develop backend APIs, optimize databases, and work with cloud services like AWS.
-                        Explore my projects to see how I use React, Node.js, and MongoDB to create seamless and efficient user experiences.
+                        I’m a Full Stack Engineer specializing in Next.js, Node.js, TypeScript, PostgreSQL, and real-time systems. I enjoy building production-grade applications — from backend architecture and API design to clean, responsive UI. I’ve developed real-time collaborative tools, AI-powered apps, and scalable full-stack platforms.
                     </p>
 
                     <a download='' href={CV} alt='resume file' className='button button--flex'>

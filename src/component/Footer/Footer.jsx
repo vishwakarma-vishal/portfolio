@@ -9,26 +9,8 @@ export default function Footer() {
         <footer className="footer">
             <div className="container">
                 <div className="footer__container">
-                    <h1 className="footer__title">Vishal</h1>
-
-                    <ul className="footer__list">
-                        <li>
-                            <a href="#about" className="footer__link">About</a>
-                        </li>
-
-                        <li>
-                            <a href="#portfolio" className="footer__link">Portfolio</a>
-                        </li>
-
-                        <li>
-                            <a href="#testimonials" className="footer__link">Testimonials</a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div className="footer__container">
                     <div className="footer__social">
-                        <a href={`https://www.linkedin.com/in/${linkedinUsername}`}className="footer__social-link" target="_blank">
+                        <a href={`https://www.linkedin.com/in/${linkedinUsername}`} className="footer__social-link" target="_blank">
                             <i className="uil uil-linkedin-alt"></i>
                         </a>
 

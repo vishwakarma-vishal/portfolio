@@ -1,10 +1,11 @@
+import placeholder from '../../assets/project-placeholder.jpg'
 
 export default function WorkItems({ item }) {
 
     return (
         <div className="work__card" key={item.id}>
             <div className="work__img">
-                <img src={item.image} alt="Work image" />
+                <img src={item.image !== undefined ? item.image : placeholder} alt="Work image" />
             </div>
 
             <div className="work__content">

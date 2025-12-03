@@ -28,13 +28,6 @@
     color: var(--title-color-dark);
 }
 
-/* list */
-.footer__list {
-    display: flex;
-    justify-content: center;
-    column-gap: 1.5rem;
-}
-
 .footer__social {
     display: flex;
     justify-content: center;
@@ -86,9 +79,5 @@
     .footer__container {
         flex-direction: column;
         row-gap: 0.5rem;
-    }
-
-    .footer__title {
-        display: none;
     }
 }

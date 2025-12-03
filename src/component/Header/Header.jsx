@@ -38,7 +38,7 @@ function Header() {
 
         // Set initial theme based on system preference
         handleThemeChange(systemPreference);
-        
+
         // Add event listener for changes in system theme preference
         systemPreference.addEventListener('change', handleThemeChange);
 
@@ -58,18 +58,11 @@ function Header() {
         <header className='header'>
             <nav className='nav container'>
                 {/* Logo */}
-                <a href="index.html" className="nav__logo">Vishal</a>
+                <a href="#home" className="nav__logo">Vishal</a>
 
                 {/* Menu */}
                 <div className={Toggle ? "nav__menu show__menu" : "nav__menu"}>
                     <ul className="nav__list">
-                        <li className="nav__item">
-                            <a href="#home"
-                                onClick={() => setActiveNav("#home")}
-                                className={activeNav === "#home" ? 'nav__link active-link' : "nav__link"}>
-                                <i className='uil uil-estate nav__icon'></i>Home
-                            </a>
-                        </li>
                         <li className="nav__item">
                             <a href="#about"
                                 onClick={() => setActiveNav("#about")}
@@ -85,17 +78,17 @@ function Header() {
                             </a>
                         </li>
                         <li className="nav__item">
-                            <a href="#services"
-                                onClick={() => setActiveNav("#services")}
-                                className={activeNav === "#services" ? 'nav__link active-link' : "nav__link"}>
-                                <i className='uil uil-briefcase-alt nav__icon'></i>Services
+                            <a href="#qualification"
+                                onClick={() => setActiveNav("#qualification")}
+                                className={activeNav === "#qualification" ? 'nav__link active-link' : "nav__link"}>
+                                <i className='uil uil-briefcase-alt nav__icon'></i>Qualification
                             </a>
                         </li>
                         <li className="nav__item">
-                            <a href="#portfolio"
-                                onClick={() => setActiveNav("#portfolio")}
-                                className={activeNav === "#portfolio" ? 'nav__link active-link' : "nav__link"}>
-                                <i className='uil uil-scenery nav__icon'></i>Portfolio
+                            <a href="#work"
+                                onClick={() => setActiveNav("#work")}
+                                className={activeNav === "#work" ? 'nav__link active-link' : "nav__link"}>
+                                <i className='uil uil-scenery nav__icon'></i>Work
                             </a>
                         </li>
                         <li className="nav__item">

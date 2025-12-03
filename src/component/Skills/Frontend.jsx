@@ -1,11 +1,11 @@
 export default function Frontend() {
     const skills = [
-        { name: "HTML", level: "Intermediate" },
-        { name: "CSS", level: "Intermediate" },
-        { name: "JavaScript", level: "Intermediate" },
-        { name: "Git", level: "Intermediate" },
-        { name: "React JS", level: "Intermediate" },
-        { name: "TypeScript", level: "Basic" }
+        { name: "Tailwind", level: "Advanced" },
+        { name: "TypeScript", level: "Intermediate" },
+        { name: "React.js", level: "Advanced" },
+        { name: "JavaScript", level: "Advanced" },
+        { name: "Next.js", level: "Advanced" },
+        { name: "Git", level: "Intermediate" }
     ];
 
     return (

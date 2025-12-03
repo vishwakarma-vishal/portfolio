@@ -14,7 +14,7 @@
     display: grid;
     grid-template-columns: repeat(3, 140px);
     gap: 1rem;
-    margin-bottom:var(--mb-2);
+    margin-bottom: var(--mb-2);
 }
 
 .about__box {
@@ -81,7 +81,7 @@
         gap: 0.8rem;
     }
 
-    .about__description{
+    .about__description {
         padding: 0;
     }
 }

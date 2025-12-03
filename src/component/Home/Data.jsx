@@ -8,8 +8,10 @@ export default function Data() {
             <h1 className="home__title">Vishal Vishwakarma
                 <Hand />
             </h1>
-            <h2 className="home__subtitle">Full Stack Developer</h2>
-            <p className="home__description">SDE Intern @ Tecell | Building Scalable & High-Performance Web Apps with React.js & Node.js Magic</p>
+            <h2 className="home__subtitle">Full Stack Engineer</h2>
+            <p className="home__description">
+                Ex-SDE Intern @ Tecell | Building real-time, scalable & high-performance apps with Next.js, Node.js, TypeScript & PostgreSQL
+            </p>
 
             <a href="#contact" className="button button--flex">
                 Say Hello
