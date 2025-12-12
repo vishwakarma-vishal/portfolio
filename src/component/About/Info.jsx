@@ -15,7 +15,7 @@ export default function Info() {
             </div>
 
             <div className="about__box" aria-hidden="false">
-                <i className='bx bx-support about__icon' aria-hidden="true"></i>
+                <i className='bx bx-code-alt about__icon' aria-hidden="true"></i>
                 <h3 className="about__title">Leetcode</h3>
                 <span className="about__subtitle">350+ DSA</span>
             </div>
