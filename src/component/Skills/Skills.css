@@ -1,13 +1,22 @@
-.skills__container {
-    grid-template-columns: repeat(2, 350px);
-    column-gap: 3rem;
+.skills {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
+
+.skills__container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+    max-width: 1080px;
+}
+
 
 .skills__content {
     background-color: var(--container-color);
     border: 1px solid rgba(0, 0, 0, 0.1);
-    padding: 2rem 3rem;
+    padding: 1.75rem 2rem;
     border-radius: 1.25rem;
 }
 
@@ -21,23 +30,23 @@
 .skills__box {
     display: flex;
     justify-content: center;
-    column-gap: 2.5rem;
+    column-gap: 2rem;
 }
 
 .skills__group {
     display: grid;
     align-content: flex-start;
     align-items: flex-start;
-    row-gap: 1rem;
+    row-gap: 0.9rem;
 }
 
 .skills__data {
     display: flex;
-    column-gap: 0.5rem;
+    column-gap: 0.6rem;
 }
 
 .skills .bx-badge-check {
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: var(--title-color);
 }
 
@@ -53,20 +62,21 @@
 
 
 /*=============== BREAKPOINTS ===============*/
+@media screen and (max-width: 1080px) {
+    .skills__container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 /* For medium devices */
 @media screen and (max-width: 992px) {
     .skills__container {
-        grid-template-columns: max-content;
-        row-gap: 2rem;
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 
 /* For small devices */
 @media screen and (max-width: 576px) {
-    .skills__container {
-        grid-template-columns: 1fr;
-    }
-
     .skills__content {
         padding: 1.5rem;
     }

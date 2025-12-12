@@ -64,6 +64,14 @@ function Header() {
                 <div className={Toggle ? "nav__menu show__menu" : "nav__menu"}>
                     <ul className="nav__list">
                         <li className="nav__item">
+                            <a href="#"
+                                onClick={() => setActiveNav("#home")}
+                                className={activeNav === "#home" ? 'nav__link active-link' : "nav__link"}>
+                                <i className="uil uil-home nav__icon"></i>
+                                Home
+                            </a>
+                        </li>
+                        <li className="nav__item">
                             <a href="#about"
                                 onClick={() => setActiveNav("#about")}
                                 className={activeNav === "#about" ? 'nav__link active-link' : "nav__link"}>

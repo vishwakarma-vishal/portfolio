@@ -1,17 +1,3 @@
-@keyframes blink {
-    0% {
-        opacity: 1;
-    }
-
-    50% {
-        opacity: 0.5;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
 /* work filters */
 .work__filters {
     display: flex;
@@ -23,7 +9,7 @@
 .work__item {
     cursor: pointer;
     color: var(--title-color);
-    padding: 0.35rem 0.85rem;
+    padding: 0.35rem 1rem;
     font-weight: var(--font-medium);
     border-radius: 1rem;
     text-transform: capitalize;
@@ -34,123 +20,318 @@
     color: var(--container-color);
 }
 
-/* to show the active category */
 .active-work {
     background-color: var(--title-color);
     color: var(--container-color);
 }
 
-/* project card */
+/* new container: stack cards vertically */
 .work__container {
-    display: grid;
-    grid-template-columns: repeat(3, max-content);
-    justify-content: center;
-    gap: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
 }
 
+/* project card - left media, right content */
 .work__card {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 1.25rem;
     background-color: var(--container-color);
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.06);
     border-radius: 1rem;
+    overflow: hidden;
 }
 
+/* media area */
 .work__img {
-    width: 280px;
-    height: 180px;
-    border-radius: 1rem 1rem 0 0;
+    width: 100%;
+    max-height: 290px;
     overflow: hidden;
-
+    display: block;
+    border: 10px solid var(--container-color);
 }
 
 .work__img img {
     width: 100%;
     height: 100%;
-    aspect-ratio: 16/9;
-    border-radius: 1rem 1rem 0 0;
-    transition: .5s;
+    object-fit: cover;
+    display: block;
+    /* min-height: 240px; */
+    border-radius: 10px;
+    transition: transform .45s ease;
 }
 
 .work__img img:hover {
-    transform: scale(120%);
+    transform: scale(1.06);
 }
 
+/* content column */
 .work__content {
-    padding: 0.5rem 1rem 1rem 1rem;
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.work__head {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
 .work__title {
     font-size: var(--normal-font-size);
     font-weight: var(--font-medium);
-    margin-bottom: var(--mb-0-25);
+    margin: 0;
 }
 
-.link_container {
+.work__tech {
     display: flex;
-    justify-content: space-between;
+    gap: 0.5rem;
+    flex-wrap: wrap;
 }
 
-.work__button {
-    font-size: var(--small-font-size);
+.work__tech-tag {
+    padding: 0.25rem 0.6rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
     color: var(--text-color);
+    background: var(--body-color);
+}
+
+/* bullets */
+.work__bullets {
+    margin: 0;
+    padding-left: 1.05rem;
+    color: var(--text-color);
+    line-height: 1.45;
+    margin-top: 0.25rem;
+    font-size: 14px;
+}
+
+/* links row */
+.work__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: auto;
+    align-items: center;
+}
+
+/* overriding default culure desing */
+.work__links .button {
+    padding: 0.55rem 0.9rem;
+    font-size: 0.95rem;
+    border-radius: 0.6rem;
+}
+
+.work__links .work__button {
+    display: flex;
+    gap: 0.4rem;
+}
+
+/* button variants */
+.work__view-readme .work__button-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    font-size: 18px;
+    /* inherit text color so icons match */
+}
+
+
+/* modal styles */
+.modal__overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
     display: flex;
     align-items: center;
-    column-gap: 0.25rem;
-    width: fit-content;
+    justify-content: center;
+    z-index: var(--z-modal);
+    padding: 1.5rem;
 }
 
-.work__button:nth-of-type(2) {
-    font-size: 1.3rem;
+.modal__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
 }
 
-.work__button-icon {
-    font-size: 1rem;
-    transition: .4s;
+.modal__close {
+    background: transparent;
+    border: none;
+    font-size: 1.25rem;
+    padding: 0.5rem;
+    cursor: pointer;
 }
 
-.work__button:hover .work__button-icon {
-    transform: translateX(0.25rem);
+.modal__close-icon {
+    color: var(--text-color)
 }
 
+.modal__body {
+    padding: 1rem 1.25rem;
+    overflow: auto;
+    background: transparent;
+    color: var(--text-color);
+    margin-right: 1rem;
+    scrollbar-color: var(--text-color) var(--body-color);
+}
 
-/*=============== BREAKPOINTS ===============*/
-/* For large devices */
+.modal__footer {
+    padding: 0.8rem 1rem;
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+/* responsive: collapse to single column on narrower screens */
 @media screen and (max-width: 992px) {
-    .work__container {
-        grid-template-columns: repeat(2, max-content);
-        gap: 1.25rem;
+    .work__card {
+        grid-template-columns: 1fr;
     }
 
-    .work__content {
-        padding: 0.5rem 1rem 1rem 1rem;
-    }
-}
-
-/* For medium devices */
-@media screen and (max-width: 768px) {
-    .work__container {
-        grid-template-columns: max-content;
+    .work__img img {
+        min-height: 200px;
     }
 }
 
 @media screen and (max-width: 576px) {
-    .work__container {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
+    .work__card {
+        border-radius: 0.75rem;
     }
 
-    .work__img {
-        width: 100%;
-        height: auto;
+    .work__img img {
+        min-height: 160px;
     }
 }
 
-/* For small devices */
-@media screen and (max-width: 350px) {
-    .work__item {
-        font-size: var(--small-font-size);
-    }
+.markdown-body pre {
+    background: #0f0f0f;
+    /* darker code block to match site tone */
+    border-radius: 6px;
+    overflow: auto;
+}
 
-    .work__filters {
-        column-gap: 0.25rem;
-    }
+/* Ensure images inside markdown scale well */
+.markdown-body img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ===== Strong, consistent disc bullets for README + project lists ===== */
+
+/* Target GitHub-rendered markdown and our project bullets  */
+.markdown-container {
+    padding: 1rem;
+    overflow: auto;
+    /* max-height: 65vh; */
+    background: transparent;
+    color: var(--text-color);
+}
+
+.markdown-body ul,
+.markdown-body ul ul,
+.markdown-body ul ul ul,
+.markdown-container ul,
+.markdown-container ul ul,
+.work__bullets,
+.work__bullets ul,
+.work__bullets ul ul {
+    /* force solid disc for all levels */
+    list-style-type: disc !important;
+    list-style-position: outside !important;
+    /* outside gives consistent gutter markers */
+    padding-left: 1.2rem !important;
+    /* consistent indentation */
+    margin: 0 0 0.6rem 0 !important;
+}
+
+.markdown-body ul ul {
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+    padding-left: 1.05rem;
+}
+
+/* Set marker color and size so bullets are visible on dark theme */
+.markdown-body li::marker,
+.work__bullets li::marker {
+    color: var(--text-color) !important;
+    /* light color (white card color) */
+    font-size: 1.05rem;
+    opacity: 1;
+}
+
+/* Ensure checkboxes (task lists) align properly */
+.markdown-body input[type="checkbox"] {
+    transform: translateY(0.05rem);
+    margin-right: 0.4rem;
+}
+
+/* Ensure bullets inside headers or custom containers still show */
+.markdown-body>ul,
+.markdown-body section>ul {
+    padding-left: 1.2rem;
+}
+
+/* If you prefer slightly dimmer bullets, swap color to var(--text-color) — otherwise keep container-color */
+
+/* Modal panel uses site variables so it follows theme automatically */
+
+.modal__panel {
+    background: var(--container-color);
+    color: var(--text-color);
+    width: min(1100px, 96%);
+    max-height: 86vh;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.35);
+}
+
+/* markdown body follows variables too */
+.modal__panel .markdown-body {
+    background: transparent;
+    /* let panel color show */
+    color: var(--text-color);
+    line-height: 1.6;
+    font-size: 0.98rem;
+}
+
+/* headings & links */
+.modal__panel .markdown-body h1,
+.modal__panel .markdown-body h2,
+.modal__panel .markdown-body h3 {
+    color: var(--title-color);
+}
+
+.modal__panel .markdown-body a {
+    color: var(--title-color);
+    text-decoration: underline;
+}
+
+/* code */
+.modal__panel .markdown-body pre {
+    background: rgba(0, 0, 0, 0.06);
+    /* small neutral bg — you can replace with a var if you want */
+    color: var(--text-color);
+    border-radius: 8px;
+}
+
+/* list markers (ensure visible on dark/light) */
+.modal__panel .markdown-body li::marker {
+    color: var(--title-color);
+}
+
+.modal_button {
+    padding: 0.55rem 1rem !important;
+    font-size: 0.95rem;
+    border-radius: 0.6rem !important;
 }
