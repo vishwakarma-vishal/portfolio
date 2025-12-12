@@ -200,6 +200,14 @@
     .work__img img {
         min-height: 200px;
     }
+
+    .modal__overlay {
+        padding: 0.7rem;
+    }
+
+    .modal__body {
+        padding: 0.5rem;
+    }
 }
 
 @media screen and (max-width: 576px) {
@@ -209,6 +217,10 @@
 
     .work__img img {
         min-height: 160px;
+    }
+
+    .modal__overlay {
+        padding: 0.5rem;
     }
 }
 
